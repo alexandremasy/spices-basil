@@ -10,7 +10,7 @@ let n = basil.random(1, 8); // yield a number between 1 - 8
 ### Function
 - `debounce(fn:function, [wait:number=0], [options:object={}]):Function`
 - `delay(wait:number):Promise`
-- `once(fn:function):*`
+- `[once(fn:function):*]`
 - `sequence(fns:array.<function>):Promise`
 
 ### Number
@@ -30,6 +30,10 @@ let n = basil.random(1, 8); // yield a number between 1 - 8
 - `isNil(value:*):boolean`
 - `isObject(value:*):boolean`
 - `isString(value:*):boolean`
+
+## Configuration
+
+- `global:boolean = false` Declare basil globally (window.basil) or not. If set to `true` basil will be declared.  
 
 ---------------------------------------------------------
 

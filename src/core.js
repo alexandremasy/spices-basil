@@ -4,6 +4,19 @@ import vue from './core/vue'
 
 const core = Object.assign({}, utils);
 
+/**
+ * Whether or not declare the globally basil
+ */
+let _isGlobal = false;
+Object.defineProperty(core, 'global', {
+  get: () => _isGlobal,
+  set: (value) => {
+    _isGlobal = value;
+    if (value === true){
+      window.basil = core;
+    } 
+  }
+});
 
 /**
  * @property {array} plugins
