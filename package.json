@@ -15,6 +15,10 @@
   "main": "dist/spices-basil.min.js.js",
   "module": "dist/spices-basil.esm.min.js",
   "name": "@spices/basil",
+  "nodemonConfig": {
+    "exec": "yarn bundle",
+    "watch": "src"
+  },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com:alexandremasy/spices-basil.git"
@@ -22,7 +26,7 @@
   "scripts": {
     "bundle": "rollup -c",
     "ci": "node ./scripts/ci.js",
-    "start": "nodemon --exec \"yarn bundle\"",
+    "start": "nodemon",
     "prepublish": "yarn bundle"
   },
   "version": "0.0.1"
