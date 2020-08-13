@@ -9,7 +9,7 @@ let n = basil.random(1, 8); // yield a number between 1 - 8
 ```
 
 ### Number
-- `random(min:number, max:number):string`
+- `random([min:number=0], [max:number=1], [floating:boolean = false]):number`
 
 ### String
 - `slugify(value:string):string`
@@ -45,12 +45,15 @@ basil.use( i18n, {});
 - `toRangeCurrency(min:number, max, [signed:boolean = false]):string`
 - `$date(value:Date, format:'date')`
 
+### 
+
 ---------------------------------------------------------
 
 ## VueJS
 
 - Declare the `$basil` property that allows you to use all the utiilities from the components.
 - Declare some `mixins` to easily transform your data from the components.
+- Declare the plugins `components`
 
 ```JS
 import Vue from 'vue'
