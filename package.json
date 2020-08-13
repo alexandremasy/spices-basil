@@ -29,5 +29,5 @@
     "start": "nodemon",
     "prepublish": "yarn bundle"
   },
-  "version": "0.0.1"
+  "version": "0.0.0"
 }
