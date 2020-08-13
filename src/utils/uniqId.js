@@ -1,4 +1,4 @@
-const idCounter:object = {}
+const idCounter = {}
 
 /**
  * Generate a unique ID. If `prefix` is given, the ID is append to it.
