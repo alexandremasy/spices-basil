@@ -1,6 +1,5 @@
 const path = require('path')
-const cjs = require('rollup-plugin-commonjs')
-const node = require('rollup-plugin-node-resolve')
+const cjs = require('@rollup/plugin-commonjs')
 
 const version = process.env.VERSION || require('./package.json').version
 const banner =
@@ -43,8 +42,7 @@ function config(opts){
       name: 'Spicesbasil'
     },
     plugins: [
-      node(),
-      cjs(),
+      cjs()
     ]
   }
 
