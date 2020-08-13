@@ -33,6 +33,23 @@ let n = basil.random(1, 8); // yield a number between 1 - 8
 
 ---------------------------------------------------------
 
+## VueJS
+By default @spices is build for VueJS but it is an option for basil.  
+
+- Declare the `$basil` property that allows you to use all the utiilities from the components.
+- Declare some `mixins` to easily transform your data from the components.
+- Declare the plugins `components`
+
+```JS
+import Vue from 'vue'
+import { basil, install } from '@spices/basil`
+
+Vue.use(install)
+```
+ 
+
+---------------------------------------------------------
+
 ## Plugins
 Basil comes at heart with a plugin system allowing to extends its abilities without flooding the codebase. 
 
@@ -52,21 +69,3 @@ basil.use( i18n, {});
 - `$date(value:Date, format:'date')`
 
 ### 
-
----------------------------------------------------------
-
-## VueJS
-
-- Declare the `$basil` property that allows you to use all the utiilities from the components.
-- Declare some `mixins` to easily transform your data from the components.
-- Declare the plugins `components`
-
-```JS
-import Vue from 'vue'
-import { basil, install } from '@spices/basil`
-
-Vue.use(install)
-```
- 
-### Mixins
-

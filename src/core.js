@@ -1,39 +1,41 @@
-import debounce from './utils/debounce'
-import delay from './utils/delay'
-import sequence from './utils/sequence'
-
-import isArray from './utils/isArray'
-import isBoolean from './utils/isBoolean'
-import isEmpty from './utils/isEmpty'
+import utils from './utils'
 import isFunction from './utils/isFunction'
-import isNumber from './utils/isNumber'
-import isObject from './utils/isObject'
-import isString from './utils/isString'
+import vue from './core/vue'
 
-import random from './utils/random'
+const core = Object.assign({}, utils);
 
-import slugify from './utils/slugify'
-import uniqId from './utils/uniqId'
-import uuid from './utils/uuid'
 
-const core = {
-  debounce,
-  delay,
-  sequence,
-  
-  isArray,
-  isBoolean,
-  isEmpty,
-  isFunction,
-  isNumber,
-  isObject,
-  isString,
+/**
+ * @property {array} plugins
+ * @private
+ */
+const __plugins = [];
 
-  random,
+/**
+ * Install a plugin
+ * 
+ * @param {*} plugin 
+ */
+core.use = (plugin, options) => {
+  if (!isFunction(plugin.install)) {
+    console.log('A basil plugin must have an install method', plugin);
+    return;
+  }
 
-  slugify,
-  uniqId,
-  uuid
+  plugin.install.call(plugin, core, options);
+  __plugins.push({plugin, options});
 }
+
+/**
+ * Relaunch the plugin install
+ * 
+ * @private
+ */
+core.reset = () => {
+  __plugins.forEach( (p) => p.plugin.install.call(p.plugin, core, p.options) )
+}
+
+// VueJS Plugin
+core.use(vue);
 
 export default core
