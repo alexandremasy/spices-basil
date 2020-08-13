@@ -1,4 +1,6 @@
 import debounce from './utils/debounce'
+import delay from './utils/delay'
+import sequence from './utils/sequence'
 
 import isArray from './utils/isArray'
 import isBoolean from './utils/isBoolean'
@@ -16,6 +18,8 @@ import uuid from './utils/uuid'
 
 const core = {
   debounce,
+  delay,
+  sequence,
   
   isArray,
   isBoolean,

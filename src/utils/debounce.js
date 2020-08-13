@@ -46,7 +46,7 @@ export default (func, wait, options) => {
   let trailing = true
 
   // Bypass `requestAnimationFrame` by explicitly setting `wait=0`.
-  const useRAF = (!wait && wait !== 0 && typeof this.requestAnimationFrame === 'function')
+  const useRAF = (!wait && wait !== 0 && typeof window.requestAnimationFrame === 'function')
 
   if (typeof func !== 'function') {
     throw new TypeError('Expected a function')
@@ -71,15 +71,15 @@ export default (func, wait, options) => {
 
   function startTimer(pendingFunc, wait) {
     if (useRAF) {
-      this.cancelAnimationFrame(timerId)
-      return this.requestAnimationFrame(pendingFunc)
+      window.cancelAnimationFrame(timerId)
+      return window.requestAnimationFrame(pendingFunc)
     }
     return setTimeout(pendingFunc, wait)
   }
 
   function cancelTimer(id) {
     if (useRAF) {
-      return this.cancelAnimationFrame(id)
+      return window.cancelAnimationFrame(id)
     }
     clearTimeout(id)
   }

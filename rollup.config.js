@@ -1,5 +1,6 @@
 const path = require('path')
 const cjs = require('@rollup/plugin-commonjs')
+const { terser } = require('rollup-plugin-terser')
 
 const version = process.env.VERSION || require('./package.json').version
 const banner =
@@ -26,10 +27,16 @@ module.exports = [
   },
   {
     entry: resolve('src/index.js'),
+    file: resolve('dist/spices-basil.esm.js'),
+    format: 'es',
+    env: 'development'
+  },
+  {
+    entry: resolve('src/index.js'),
     file: resolve('dist/spices-basil.esm.min.js'),
     format: 'es',
     env: 'production'
-  }
+  },
 ].map(config)
 
 function config(opts){
@@ -42,7 +49,19 @@ function config(opts){
       name: 'Spicesbasil'
     },
     plugins: [
-      cjs()
+      cjs(),
+      terser({
+        output: {
+          comments: opts.env === 'development' ? 'all' : function (node, comment) {
+            var text = comment.value;
+            var type = comment.type;
+            if (type == "comment2") {
+              // multiline comment
+              return /@preserve|@license|@cc_on/i.test(text);
+            }
+          },
+        },
+      })
     ]
   }
 
