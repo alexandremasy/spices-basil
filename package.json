@@ -1,0 +1,29 @@
+{
+  "author": "Alexandre <hello@alexandremasy.com>",
+  "description": "Javascript utility library for common tasks with a plugin system",
+  "devDependencies": {
+    "ora": "^5.0.0",
+    "rollup": "^2.21.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "semver": "^7.3.2"
+  },
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "main": "dist/spices-basil.min.js.js",
+  "module": "dist/spices-basil.esm.min.js",
+  "name": "@spices/basil",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:alexandremasy/spices-basil.git"
+  },
+  "scripts": {
+    "bundle": "rollup -c",
+    "ci": "node ./scripts/ci.js",
+    "start": "nodemon --exec \"yarn bundle\"",
+    "prepublish": "yarn bundle"
+  },
+  "version": "0.0.1"
+}
