@@ -39,13 +39,10 @@ basil.use( i18n, {});
 
 ### i18n
 
-
 - `set/get locale:Locale`
 - `set/get locales:Array`
-
 - `toCurrency(value:number, [signed:boolean = false]):string`
 - `toRangeCurrency(min:number, max, [signed:boolean = false]):string`
-
 - `$date(value:Date, format:'date')`
 
 ---------------------------------------------------------
