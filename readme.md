@@ -50,26 +50,10 @@ import { basil, install } from '@spices/basil`
 
 Vue.use(install)
 ```
- 
 
 ---------------------------------------------------------
 
 ## Plugins
 Basil comes at heart with a plugin system allowing to extends its abilities without flooding the codebase. 
 
-```JS
-import { basil } from '@spices/basil'
-import { i18n } from '@spices/basil-i18n'
-
-basil.use( i18n, {});
-```
-
-### i18n
-
-- `set/get locale:Locale`
-- `set/get locales:Array`
-- `toCurrency(value:number, [signed:boolean = false]):string`
-- `toRangeCurrency(min:number, max, [signed:boolean = false]):string`
-- `$date(value:Date, format:'date')`
-
-### 
+- [@spices/basil-i18n)(https://github.com/alexandremasy/spices-basil-i18n)
