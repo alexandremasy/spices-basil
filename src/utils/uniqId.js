@@ -5,6 +5,7 @@ const idCounter = {}
  * 
  * @param {string} [prefix=''] The value to prefix the ID with.
  * @returns {string}
+ * @source lodash.com
  */
 export default (prefix = '') => {
   let key = prefix.length > 0 ? prefix : '$basil$';

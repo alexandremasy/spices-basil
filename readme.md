@@ -7,6 +7,9 @@ import { basil } from '@spices/basil'
 
 let n = basil.random(1, 8); // yield a number between 1 - 8
 ```
+### Function
+- `debounce(fn:function, [wait:number=0], [options:object={}]):Function`
+- `sequence(fns:array.<function>):Promise`
 
 ### Number
 - `random([min:number=0], [max:number=1], [floating:boolean = false]):number`
@@ -23,6 +26,7 @@ let n = basil.random(1, 8); // yield a number between 1 - 8
 - `isFunction(value:*):boolean`
 - `isNumber(value:*):boolean`
 - `isNil(value:*):boolean`
+- `isObject(value:*):boolean`
 - `isString(value:*):boolean`
 
 ---------------------------------------------------------

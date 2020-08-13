@@ -1,21 +1,31 @@
-import { default as isArray } from './utils/isArray'
-import { default as isBoolean } from './utils/isBoolean'
-import { default as isEmpty } from './utils/isEmpty'
-import { default as isFunction } from './utils/isFunction'
-import { default as isNumber } from './utils/isNumber'
-import { default as isString } from './utils/isString'
+import debounce from './utils/debounce'
 
-import { default as slugify } from './utils/slugify'
-import { default as uniqId } from './utils/uniqId'
-import { default as uuid } from './utils/uuid'
+import isArray from './utils/isArray'
+import isBoolean from './utils/isBoolean'
+import isEmpty from './utils/isEmpty'
+import isFunction from './utils/isFunction'
+import isNumber from './utils/isNumber'
+import isObject from './utils/isObject'
+import isString from './utils/isString'
+
+import random from './utils/random'
+
+import slugify from './utils/slugify'
+import uniqId from './utils/uniqId'
+import uuid from './utils/uuid'
 
 const core = {
+  debounce,
+  
   isArray,
   isBoolean,
   isEmpty,
   isFunction,
   isNumber,
+  isObject,
   isString,
+
+  random,
 
   slugify,
   uniqId,

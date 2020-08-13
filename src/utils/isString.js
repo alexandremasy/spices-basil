@@ -6,6 +6,7 @@ import getTag from './internal/getTag'
  * 
  * @param {*} value The value to check
  * @returns {boolean} Returns `true` if `value` is a string, else `false`
+ * @source lodash.com
  */
 export default (value) => {
   const type = typeof value;

@@ -3,5 +3,6 @@
  * 
  * @param {*} value The value to check
  * @returns {boolean} 
+ * @source lodash.com
  */
 export default (value) => typeof value === 'function'
