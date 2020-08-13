@@ -7,7 +7,7 @@ import getTag from './internal/getTag'
  * @param {*} value The value to check
  * @returns {boolean} Returns `true` if `value` is a string, else `false`
  */
-export default function isString(value){
+export default (value) => {
   const type = typeof value;
   return type === 'string' || (type === 'object' && value != null && !isArray(value) && getTag(value) == '[object String]');
 }

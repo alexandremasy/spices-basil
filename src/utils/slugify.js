@@ -4,7 +4,7 @@
  * @param {string} value The value to slugify
  * @returns {string}
  */
-export default function slugify(value){
+export default (value) => {
   let str = String(value).toString();
   str = str.replace(/^\s+|\s+$/g, ""); // trim
   str = str.toLowerCase();

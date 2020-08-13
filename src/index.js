@@ -1,2 +1,4 @@
-export { default as SaylVue } from './install'
-export { default as sayl } from './core'
+export { default as install } from './install'
+export { default as basil } from './core'
+
+

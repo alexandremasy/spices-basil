@@ -15,7 +15,7 @@ import isPrototype from './internal/isPrototype'
  * @param {*} value The value to check
  * @returns {boolean} Returns `true` if `value` is empty, else `false` 
  */
-export default function isEmpty(value){
+export default (value) => {
   if (isArray(value) || typeof value === 'string' || typeof value.splice === 'function'){
     return !value.length
   }

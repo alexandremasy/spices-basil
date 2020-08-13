@@ -4,6 +4,4 @@
  * @param {*} arg The value to check
  * @returns {Boolean}
  */
-export default function isBoolean(value){
-  return value === true || value === false
-}
+export default (value) => value === true || value === false

@@ -9,7 +9,7 @@ import { default as slugify } from './utils/slugify'
 import { default as uniqId } from './utils/uniqId'
 import { default as uuid } from './utils/uuid'
 
-const sayl = {
+const core = {
   isArray,
   isBoolean,
   isEmpty,
@@ -22,4 +22,4 @@ const sayl = {
   uuid
 }
 
-export default sayl
+export default core

@@ -6,8 +6,8 @@ const idCounter = {}
  * @param {string} [prefix=''] The value to prefix the ID with.
  * @returns {string}
  */
-export default function uniqId(prefix = ''){
-  let key = prefix.length > 0 ? prefix : '$sayl$';
+export default (prefix = '') => {
+  let key = prefix.length > 0 ? prefix : '$basil$';
   if (!idCounter.hasOwnProperty(key)){
     idCounter[key] = 0
   }
