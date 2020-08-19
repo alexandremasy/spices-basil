@@ -6,6 +6,7 @@ import isArray from './isArray'
 import isBoolean from './isBoolean'
 import isEmpty from './isEmpty'
 import isFunction from './isFunction'
+import isNil from './isNil'
 import isNumber from './isNumber'
 import isObject from './isObject'
 import isString from './isString'
@@ -25,6 +26,7 @@ const utils = {
   isBoolean,
   isEmpty,
   isFunction,
+  isNil,
   isNumber,
   isObject,
   isString,
