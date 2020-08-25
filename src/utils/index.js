@@ -1,3 +1,4 @@
+import copy from './copy'
 import debounce from './debounce'
 import delay from './delay'
 import sequence from './sequence'
@@ -12,12 +13,14 @@ import isObject from './isObject'
 import isString from './isString'
 
 import random from './random'
+import shuffle from './shuffle'
 
 import slugify from './slugify'
 import uniqId from './uniqId'
 import uuid from './uuid'
 
 const utils = {
+  copy,
   debounce,
   delay,
   sequence,
@@ -32,6 +35,7 @@ const utils = {
   isString,
 
   random,
+  shuffle,
 
   slugify,
   uniqId,
