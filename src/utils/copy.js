@@ -1,5 +1,5 @@
 import isArray from "./isArray"
-import isNumber from "./isNumber"
+import isObject from "./isObject"
 
 /**
  * Create a copy of the given object
