@@ -29,6 +29,7 @@ let n = basil.random(1, 8); // yield a number between 1 - 8
 - `isNumber(value:*):boolean`
 - `isNil(value:*):boolean`
 - `isObject(value:*):boolean`
+- `isRegexp(value:*):boolean`
 - `isString(value:*):boolean`
 
 ## Configuration

@@ -10,6 +10,7 @@ import isFunction from './isFunction'
 import isNil from './isNil'
 import isNumber from './isNumber'
 import isObject from './isObject'
+import isRegExp from './isRegExp'
 import isString from './isString'
 
 import random from './random'
@@ -32,6 +33,7 @@ const utils = {
   isNil,
   isNumber,
   isObject,
+  isRegExp,
   isString,
 
   random,
