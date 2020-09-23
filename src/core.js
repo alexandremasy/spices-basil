@@ -13,6 +13,9 @@ Object.defineProperty(core, 'global', {
   set: (value) => {
     _isGlobal = value;
     if (value === true){
+      /**
+       * @todo Find a better globalised way. Window is not safe way to expose as It depends on the context.
+       */
       window.basil = core;
     } 
   }
@@ -31,7 +34,7 @@ const __plugins = [];
  */
 core.use = (plugin, options) => {
   if (!isFunction(plugin.install)) {
-    console.log('A basil plugin must have an install method', plugin);
+    console.error('[@spices/basil] A basil plugin must have an install method', plugin);
     return;
   }
 
