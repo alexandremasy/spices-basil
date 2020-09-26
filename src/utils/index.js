@@ -1,6 +1,7 @@
 import copy from './copy'
 import debounce from './debounce'
 import delay from './delay'
+import get from './get'
 import sequence from './sequence'
 
 import isArray from './isArray'
@@ -12,6 +13,7 @@ import isNumber from './isNumber'
 import isObject from './isObject'
 import isRegExp from './isRegExp'
 import isString from './isString'
+import isSymbol from './isSymbol'
 
 import random from './random'
 import shuffle from './shuffle'
@@ -24,6 +26,7 @@ const utils = {
   copy,
   debounce,
   delay,
+  get,
   sequence,
 
   isArray,
@@ -35,6 +38,7 @@ const utils = {
   isObject,
   isRegExp,
   isString,
+  isSymbol,
 
   random,
   shuffle,
