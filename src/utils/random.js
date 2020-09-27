@@ -6,7 +6,7 @@
  * @param {number} max The upper bound
  * @returns {number} Returns the random number.   
  */
-export default (min=0, max=0, floating=false) => 
+export default (min=0, max=1, floating=false) => 
   floating ? 
   ~~(Math.random() * (max - min + 1)) + min :
   Math.random() * (max - min) + min;
