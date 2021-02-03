@@ -6,6 +6,7 @@ import sequence from './sequence'
 
 import isArray from './isArray'
 import isBoolean from './isBoolean'
+import isDate from './isDate',
 import isEmpty from './isEmpty'
 import isFunction from './isFunction'
 import isNil from './isNil'
@@ -31,6 +32,7 @@ const utils = {
 
   isArray,
   isBoolean,
+  isDate,
   isEmpty,
   isFunction,
   isNil,
