@@ -12,7 +12,7 @@
     "dist"
   ],
   "license": "MIT",
-  "main": "dist/spices-basil.min.js.js",
+  "main": "dist/spices-basil.min.js",
   "module": "dist/spices-basil.esm.min.js",
   "name": "@spices/basil",
   "nodemonConfig": {
