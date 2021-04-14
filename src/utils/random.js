@@ -31,8 +31,6 @@ export default ({length = 10, min, max, floating=false, type=Number}) => {
 }
 
 function getRandomNumber({ min = 0, max = 1, floating = false }){
-  max = !!max ? 1 : max
-  min = !!min ? 0 : min
   return floating ?
     ~~(Math.random() * (max - min + 1)) + min :
     Math.random() * (max - min) + min;
@@ -57,7 +55,9 @@ function getRandomDate({ min, max }){
   }
   
   let now = new Date()
-  max = isDate(max) ? max : new Date(new Date().setDate(now.getDate() - 1))
-  min = isDate(min) ? min : now
-  return new Date(min.getTime() + Math.random() * (max.getTime() - min.getTime()))
+  max = max ? max : new Date(new Date().setDate(now.getDate() - 7))
+  min = min ? min : now
+
+  let ret = getRandomNumber({min: min.getTime(), max: max.getTime()})
+  return new Date(ret)
 }
