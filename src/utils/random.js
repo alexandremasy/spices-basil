@@ -30,7 +30,7 @@ export default ({length = 10, min, max, floating=false, type=Number}) => {
   return fn.call(fn, options)
 }
 
-function getRandomNumber({ min, max, floating = false }){
+function getRandomNumber({ min = 0, max = 1, floating = false }){
   max = !!max ? 1 : max
   min = !!min ? 0 : min
   return floating ?
