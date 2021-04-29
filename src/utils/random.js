@@ -31,7 +31,7 @@ export default ({length = 10, min, max, floating=false, type=Number}) => {
 }
 
 function getRandomNumber({ min = 0, max = 1, floating = false }){
-  return floating ?
+  return !floating ?
     ~~(Math.random() * (max - min + 1)) + min :
     Math.random() * (max - min) + min;
 }
