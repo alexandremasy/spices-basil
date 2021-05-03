@@ -1,20 +1,20 @@
 import isNil from '../utils/isNil'
 
-let __vue = null;
+let __vue = null
 
 let vue = {};
 vue.install = (basil) => {
   if (!isNil(basil.$vue)){
-    return;
+    return
   }
 
   Object.defineProperty(basil, '$vue', {
     get: () => __vue,
     set: (value) => {
-      __vue = value;
-      basil.reset();
+      __vue = value
+      basil.reset()
     }
   })
 }
 
-export default vue;
+export default vue
